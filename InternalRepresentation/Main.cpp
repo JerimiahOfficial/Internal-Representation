@@ -7,7 +7,7 @@ int main() {
     std::getline(std::cin, arg);
 
     std::bitset<8> Binary = std::bitset<8>(std::stoi(arg));
-    std::bitset<8> Invert, Compliment, CompDeci;
+    std::bitset<8> Invert, Compliment;
 
     Invert = Binary;
     Invert.flip();
