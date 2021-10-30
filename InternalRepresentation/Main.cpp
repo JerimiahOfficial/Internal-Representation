@@ -13,7 +13,7 @@ int main() {
     Invert.flip();
 
     Compliment = Invert;
-    Compliment.set(0, true);
+    Compliment = Compliment.to_ulong() + 1;
 
     std::cout
         << "Entered Value: " + arg 
