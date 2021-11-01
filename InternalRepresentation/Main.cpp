@@ -19,18 +19,25 @@ int main() {
     Compliment = Invert;
     Compliment = Compliment.to_ulong() + 1;
 
+    // IEEE conversion
+    std::bitset<32> IEEE = std::bitset<32>(std::stoi(arg));
+    std::string IEEE_string = IEEE.to_string();
+    std::reverse(IEEE_string.begin(), IEEE_string.end());
+
     // Print out the information to the user.
     std::cout
-        << "Entered Value: " + arg 
+        << "Entered Value: " + arg
         << std::endl << std::endl
-        << "Binary Value: " + Binary.to_string() 
+        << "Binary Value: " + Binary.to_string()
         << std::endl
-        << "Inverted Value: " + Invert.to_string() 
+        << "Inverted Value: " + Invert.to_string()
         << std::endl << std::endl
-        << "Compliment Value: " + Compliment.to_string() 
+        << "Compliment Value: " + Compliment.to_string()
         << std::endl
         << "Compliment Decimal Value: " + std::to_string((int8_t)Compliment.to_ulong())
-        << std::endl << std::endl;
+        << std::endl << std::endl
+        << "IEEE Value:" << IEEE_string
+        << std::endl;
 
     // Pause so the user can see their information.
     system("pause");
