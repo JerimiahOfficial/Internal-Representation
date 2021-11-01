@@ -1,4 +1,4 @@
 # Internal-Representation
-A little tool I created for my math class, you enter a number it will tell you the binary form and calculate the two's compliment of the binary.
+A little tool I created for my math class, it allows you to get the binary form, two's compliment and the IEEE form of the given number.
 
-![image](https://user-images.githubusercontent.com/38990407/139561232-fb0c4bdc-4bfe-42a6-a9b0-6e35da222191.png)
+![image](https://user-images.githubusercontent.com/38990407/139718931-6a1ddc35-91a3-4c55-a841-8f44e0b67495.png)
