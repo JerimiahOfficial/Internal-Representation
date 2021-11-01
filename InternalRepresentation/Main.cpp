@@ -7,7 +7,7 @@ int main() {
     std::string arg;
     std::getline(std::cin, arg);
 
-    // Getting the binary equivalent of the input.
+    // Getting the binary equivalent of the input inside an 8-bit register.
     std::bitset<8> Binary = std::bitset<8>(std::stoi(arg));
     std::bitset<8> Invert, Compliment;
 
@@ -19,7 +19,7 @@ int main() {
     Compliment = Invert;
     Compliment = Compliment.to_ulong() + std::bitset<8>(1).to_ulong();
 
-    // IEEE conversion
+    // IEEE conversion from float to 32-bit floating point.
     auto bitCast = std::bit_cast<uint32_t>(std::stof(arg));
     std::bitset<32> IEEE = std::bitset<32>(bitCast);
     auto IEEE_string = IEEE.to_string();
