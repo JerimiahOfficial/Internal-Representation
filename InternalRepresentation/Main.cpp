@@ -17,7 +17,7 @@ int main() {
 
     // Add one bit to the bit set to give the two's compliment.
     Compliment = Invert;
-    Compliment = Compliment.to_ulong() + (long)1;
+    Compliment = Compliment.to_ulong() + std::bitset<8>(1).to_ulong();
 
     // IEEE conversion
     auto bitCast = std::bit_cast<uint32_t>(std::stof(arg));
