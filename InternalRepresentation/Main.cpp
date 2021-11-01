@@ -20,9 +20,9 @@ int main() {
     Compliment = Compliment.to_ulong() + 1;
 
     // IEEE conversion
-    std::bitset<32> IEEE = std::bitset<32>(std::stoi(arg));
-    std::string IEEE_string = IEEE.to_string();
-    std::reverse(IEEE_string.begin(), IEEE_string.end());
+    auto bitCast = std::bit_cast<uint32_t>(std::stof(arg));
+    std::bitset<32> IEEE = std::bitset<32>(bitCast);
+    auto IEEE_string = IEEE.to_string();
 
     // Print out the information to the user.
     std::cout
@@ -36,7 +36,7 @@ int main() {
         << std::endl
         << "Compliment Decimal Value: " + std::to_string((int8_t)Compliment.to_ulong())
         << std::endl << std::endl
-        << "IEEE Value:" << IEEE_string
+        << "IEEE Value: " << IEEE_string
         << std::endl;
 
     // Pause so the user can see their information.
