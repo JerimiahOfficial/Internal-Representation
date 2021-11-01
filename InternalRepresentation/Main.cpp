@@ -25,19 +25,12 @@ int main() {
     auto IEEE_string = IEEE.to_string();
 
     // Print out the information to the user.
-    std::cout
-        << "Entered Value: " + arg
-        << std::endl << std::endl
-        << "Binary Value: " + Binary.to_string()
-        << std::endl
-        << "Inverted Value: " + Invert.to_string()
-        << std::endl << std::endl
-        << "Compliment Value: " + Compliment.to_string()
-        << std::endl
-        << "Compliment Decimal Value: " + std::to_string((int8_t)Compliment.to_ulong())
-        << std::endl << std::endl
-        << "IEEE Value: " << IEEE_string
-        << std::endl;
+    std::cout   << "Entered Value: "        + arg
+                << "\n\nBinary Value: "     + Binary.to_string()
+                << "\nInverted Value: "     + Invert.to_string()
+                << "\n\nCompliment Value: " + Compliment.to_string()
+                << "\nCompliment Decimal: " + std::to_string((int8_t)Compliment.to_ulong())
+                << "\n\nIEEE Value: "       + IEEE_string << std::endl;
 
     // Pause so the user can see their information.
     system("pause");
